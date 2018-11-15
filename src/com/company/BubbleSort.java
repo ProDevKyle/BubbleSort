@@ -17,14 +17,19 @@ public class BubbleSort
         arr[i] = arr[j];
         arr[j] = temp;
     }
-    public static void bubbleSwap(int[] arr)
+    public static void bubbleSort(int[] arr)
     {
-        for (int i = 0; i < arr.length; i++)
+        int swaps = 1;
+        while (swaps != 0)
         {
-            for (int j = 0; j < arr.length-1; j++)
+            swaps = 0;
+            for (int i = 0; i < arr.length-1; i ++)
             {
-                if (arr[j] > arr[j+1])
-                    swap(arr,j,j+1);
+                if (arr[i] > arr[i+1])
+                {
+                    swap(arr, i, i+1);
+                    swaps++;
+                }
             }
         }
     }
@@ -32,11 +37,24 @@ public class BubbleSort
     {
         for (int i = 0; i < arr.length; i++)
         {
-            for (int j = i + 1; j < arr.length; j++)
+            for (int j = i+1; j < arr.length; j++)
             {
                 if (arr[i] > arr[j])
                     swap(arr, i, j);
             }
+        }
+    }
+    public static void insertionSort(int[] arr)
+    {
+        for (int i = 1; i < arr.length; i++)
+        {
+            int num = arr[i];
+            int j;
+            for (j = i-1; j >= 0 && num < arr[j]; j--)
+            {
+                arr[j+1] = arr[j];
+            }
+            arr[j+1] = num;
         }
     }
     public static void string(int[] arr)
