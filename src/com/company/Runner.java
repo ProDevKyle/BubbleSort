@@ -2,7 +2,10 @@ package com.company;
 
 public class Runner
 {
-    int[] arr = new int[100];
-    BubbleSort.bubbleSwap(arr);
-
+    public static void main(String[] args)
+    {
+        int[] array = BubbleSort.randIntArr(10);
+        BubbleSort.bubbleSwap(array);
+        BubbleSort.string(array);
+    }
 }
