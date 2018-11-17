@@ -5,11 +5,18 @@ public class InPlaceSorts
     public static String[] randStringArr(int count)
     {
         String[] arr = new String[count];
-        for(int i = 0; i < arr.length; i++)
+        while (count > 0)
         {
-            String[] dictionary = {"this", "that", "the", "was", "for", "ton", "tare", "with", "they", "be", "at", "one", "have", "this", "from", "by", "hot", "word", "but", "what", "some", "is", "it", "you", "or", "had", "the", "of", "to", "and", "in", "we", "can", "out", "other", "were", "which", "do", "their", "time", "if", "will", "how", "said", "an", "each", "tell", "does", "set", "three", "want", "air", "well", "also", "play", "small", "end", "put", "home", "read"};
-            int j = (int)(Math.random()*60);
-            arr[i] = dictionary[j];
+            int i = 0;
+            String str = "";
+            while (i < count)
+            {
+                char c = (char) ((Math.random()*26)+97);
+                str = str + c;
+                i++;
+            }
+            count--;
+            arr[count] = str;
         }
         return arr;
     }

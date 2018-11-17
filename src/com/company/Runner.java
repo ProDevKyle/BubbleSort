@@ -15,14 +15,14 @@ public class Runner
         long time2 = System.nanoTime();
         InPlaceSorts.selectionSort(array2);
         InPlaceSorts.makeDouble(array2);
-        time2 = System.nanoTime() - time;
-        System.out.println("Time Taken: " + time);
+        time2 = System.nanoTime() - time2;
+        System.out.println("Time Taken: " + time2);
 
         int[] array3 = InPlaceSorts.randIntArr(10);
         long time3 = System.nanoTime();
         InPlaceSorts.insertionSort(array3);
         InPlaceSorts.makeInt(array3);
-        time3 = System.nanoTime() - time;
-        System.out.println("Time Taken: " + time);
+        time3 = System.nanoTime() - time3;
+        System.out.println("Time Taken: " + time3);
     }
 }
