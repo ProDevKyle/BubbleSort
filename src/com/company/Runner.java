@@ -31,5 +31,12 @@ public class Runner
         InPlaceSorts.makeInt(array4);
         time4 = System.nanoTime() - time4;
         System.out.println("Time Taken: " + time4);
+
+        int[] array5 = InPlaceSorts.randIntArr(10);
+        long time5 = System.nanoTime();
+        InPlaceSorts.quickSort(array5, 0, array5.length-1);
+        InPlaceSorts.makeInt(array5);
+        time5 = System.nanoTime() - time5;
+        System.out.println("Time Taken: " + time5);
     }
 }
